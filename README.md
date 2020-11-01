@@ -1,4 +1,5 @@
-# Student template
+[![Build Status](https://travis-ci.org/christiankaarre/COMP.SE.200-2020-assignment.svg?branch=master)](https://travis-ci.org/christiankaarre/COMP.SE.200-2020-assignment)
+[![Coverage Status](https://coveralls.io/repos/github/christiankaarre/COMP.SE.200-2020-assignment/badge.svg?branch=master)](https://coveralls.io/github/christiankaarre/COMP.SE.200-2020-assignment?branch=master)
 
 ## Purpose of this repository
 
