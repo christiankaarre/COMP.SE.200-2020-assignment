@@ -2,5 +2,8 @@
 /node_modules
 /coverage
 
+# Webstorm
+.idea/
+
 ## Files
 package-lock.json
