@@ -1,5 +1,5 @@
 import isDate from "../src/isDate";
-import {test} from "@jest/globals";
+import { test } from "@jest/globals";
 
 test('date is date', () => {
     let date = new Date;
