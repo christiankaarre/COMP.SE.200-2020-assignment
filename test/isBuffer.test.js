@@ -1,15 +1,19 @@
 import isBuffer from "../src/isBuffer";
-import { test } from "@jest/globals";
+//import root from "../src/.internal/root";
+//var isBuffer = require('../src/isBuffer');
 
-// Check that this is fixed!
-test('buffer is buffer', () => {
-    expect(isBuffer(new Buffer(2)))
-        .toBeDefined()
+test('true buffer', () => {
+    var x = Buffer.alloc(2)//Buffer.from('abc');
+    // expect(Buffer.isBuffer(x))
+    //     .toBe(true);
+    expect(isBuffer(x))
         .toBe(true);
 });
 
-test('uint8 array is not buffer', () => {
-   expect(isBuffer(new Uint8Array(2)))
-       .toBeDefined()
-       .toBe(false);
+test('false buffer', () => {
+    var x = new Uint8Array(2)
+    expect(isBuffer(x))
+        .toBe(false);
 });
+
+
