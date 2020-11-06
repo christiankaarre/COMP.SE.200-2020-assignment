@@ -69,3 +69,10 @@ test('prototype is empty', () => {
         .toBeDefined()
         .toBe(true);
 });
+
+test('object with empty value is not empty', () => {
+    let object = Object({'a': undefined});
+    expect(isEmpty(object))
+        .toBeDefined()
+        .toBe(false);
+});

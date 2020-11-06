@@ -28,7 +28,7 @@ test('string number to number', () => {
 test('symbol to number', () => {
     expect(toNumber(Symbol("abc")))
         .toBeDefined()
-        .toBe(NaN);
+        .toBeNaN();
 });
 
 test('number object to number', () => {
@@ -72,5 +72,5 @@ test('hexadecimal to number', () => {
 test('string to number', () => {
     expect(toNumber("abcdefg"))
         .toBeDefined()
-        .toBe(NaN);
+        .toBeNaN();
 });
