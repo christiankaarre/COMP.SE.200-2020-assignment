@@ -1,10 +1,22 @@
 import isBoolean from "../src/isBoolean";
 import { test } from "@jest/globals";
 
-test('boolean is boolean', () => {
+test('false is boolean', () => {
    expect(isBoolean(false))
        .toBeDefined()
        .toBe(true);
+});
+
+test('true is boolean', () => {
+    expect(isBoolean(true))
+        .toBeDefined()
+        .toBe(true);
+});
+
+test('boolean object is boolean', () => {
+    expect(isBoolean(new Boolean(true)))
+        .toBeDefined()
+        .toBe(true);
 });
 
 test('null is not boolean', () => {
