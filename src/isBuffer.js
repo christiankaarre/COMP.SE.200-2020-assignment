@@ -13,7 +13,7 @@ const moduleExports = freeModule && freeModule.exports === freeExports
 const Buffer = root.Buffer
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
-const nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined//function (buffer) {return Buffer.isBuffer(buffer)} //Buffer ? Buffer.isBuffer : undefined
+const nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined
 
 /**
  * Checks if `value` is a buffer.
