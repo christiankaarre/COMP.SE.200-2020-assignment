@@ -28,6 +28,12 @@ function toString(value) {
   if (typeof value === 'string') {
     return value
   }
+
+  // Return empty string when value is null
+  if (value === null) {
+    return '';
+  }
+
   if (Array.isArray(value)) {
     // Recursively convert values (susceptible to call stack limits).
     return `${value.map((other) => other == null ? other : toString(other))}`
