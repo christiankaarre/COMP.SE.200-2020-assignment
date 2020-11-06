@@ -29,7 +29,8 @@
  * // => true
  */
 function eq(value, other) {
-  return value == other || (value !== value && other !== other)
+  // Fixed a bug by replacing == with ===
+  return value === other || (value !== value && other !== other)
 }
 
 export default eq
