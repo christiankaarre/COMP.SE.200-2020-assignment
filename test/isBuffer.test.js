@@ -1,14 +1,17 @@
 import isBuffer from "../src/isBuffer";
+import { test } from "@jest/globals";
 
 test('Allocated Buffer', () => {
-    var x = Buffer.alloc(2)
+    let x = Buffer.alloc(2)
     expect(isBuffer(x))
+        .toBeDefined()
         .toBe(true);
 });
 
 test('Allocated Uint8Array', () => {
-    var x = new Uint8Array(2)
+    let x = new Uint8Array(2)
     expect(isBuffer(x))
+        .toBeDefined()
         .toBe(false);
 });
 
