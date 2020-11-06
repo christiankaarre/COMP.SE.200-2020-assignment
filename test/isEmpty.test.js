@@ -48,3 +48,24 @@ test('empty object is empty', () => {
         .toBeDefined()
         .toBe(true);
 });
+
+test('empty map is empty', () => {
+    let map = new Map();
+    expect(isEmpty(map))
+        .toBeDefined()
+        .toBe(true);
+});
+
+test('empty set is empty', () => {
+   let set = new Set();
+   expect(isEmpty(set))
+       .toBeDefined()
+       .toBe(true);
+});
+
+test('prototype is empty', () => {
+    let stringProto = String.prototype;
+    expect(isEmpty(stringProto))
+        .toBeDefined()
+        .toBe(true);
+});
