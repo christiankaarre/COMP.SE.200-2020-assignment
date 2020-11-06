@@ -44,3 +44,9 @@ test('0 to finite', () => {
         .toBeDefined()
         .toBe(0);
 });
+
+test('symbol to finite', () => {
+    expect(toFinite(Symbol(0)))
+        .toBeDefined()
+        .toBe(0);
+});
