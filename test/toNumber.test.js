@@ -74,3 +74,21 @@ test('string to number', () => {
         .toBeDefined()
         .toBeNaN();
 });
+
+test('binary string to number', () => {
+    expect(toNumber('0b1010'))
+        .toBeDefined()
+        .toBe(10);
+});
+
+test('octal string to number', () => {
+    expect(toNumber('0o12'))
+        .toBeDefined()
+        .toBe(10);
+});
+
+test('hexadecimal string to number', () => {
+    expect(toNumber('0xA'))
+        .toBeDefined()
+        .toBe(10);
+});
