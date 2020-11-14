@@ -32,11 +32,6 @@
  */
 function castArray(...args) {
   const value = args[0]
-
-  if (args.length === 0) {
-    return [];
-  }
-
   return Array.isArray(value) ? value : [value]
 }
 
