@@ -1,7 +1,5 @@
 import chunk from '../src/chunk'
 
-console.log(chunk(['a', 'b', 'c', 'd'], 3))
-
 test('Chunk array into arrays with length of one', () => {
     expect(chunk(['a', 'b', 'c', 'd'])).toStrictEqual([['a'], ['b'], ['c'], ['d']])
 })
