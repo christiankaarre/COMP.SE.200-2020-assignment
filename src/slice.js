@@ -36,10 +36,11 @@ function slice(array, start, end) {
   start >>>= 0
 
   let index = -1
-  const result = new Array(length)
+  var result = new Array(length)
   while (++index < length) {
     result[index] = array[index + start]
   }
+  result = result.filter( item => item !== undefined );
   return result
 }
 
