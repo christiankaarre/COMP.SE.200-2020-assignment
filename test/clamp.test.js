@@ -21,5 +21,5 @@ test('Clamp with incorrect types', () => {
 })
 
 test('Clamp with incorrect types', () => {
-    expect(clamp('c', 'a', 'b')).toBe(0)
+    expect(clamp('c', 0, 0)).toBe(NaN)
 })
