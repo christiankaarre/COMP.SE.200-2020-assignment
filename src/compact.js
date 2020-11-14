@@ -12,12 +12,13 @@
  * // => [1, 2, 3]
  */
 function compact(array) {
-  let resIndex = -1
-  const result = []
+  let resIndex = 0
+  let result = []
 
   for (const value of array) {
     if (value) {
-      result[resIndex++] = value
+      result[resIndex] = value
+      resIndex++
     }
   }
   return result
