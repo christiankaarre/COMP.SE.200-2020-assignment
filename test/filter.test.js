@@ -1,19 +1,11 @@
-import filter from "../src/filter";
-import { test } from "@jest/globals";
+import filter from '../src/filter'
 
-test('documented usage for filter', () => {
-    const users = [
-        {'user': 'barney', 'active': true},
-        {'user': 'fred', 'active': false}
-    ]
+test('Filter over array', () => {
+    const users = [{ 'user': 'barney', 'active': true }, { 'user': 'fred',   'active': false }]
+    expect(filter(users, ({ active }) => active)).toStrictEqual([{ 'active': true, 'user': 'barney' }])
+})
 
-    expect(filter(users, ({ active }) => active))
-        .toBeDefined()
-        .toStrictEqual([{'user': 'barney', 'active': true}]);
-});
-
-test('null as parameter for filter', () => {
-    expect(filter(null, ({ active }) => active))
-        .toBeDefined()
-        .toStrictEqual([[]]);
-});
+test('Filter over null array', () => {
+    const users = null
+    expect(filter(users, ({ active }) => active)).toStrictEqual([[ ]])
+})

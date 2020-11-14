@@ -1,45 +1,31 @@
-import castArray from "../src/castArray";
-import { test } from "@jest/globals";
+import castArray from '../src/castArray'
 
-test('Number cast into array', () => {
-    expect(castArray(Number(1)))
-        .toBeDefined()
-        .toStrictEqual([1]);
-});
+test('Cast array integer', () => {
+    expect(castArray(1)).toStrictEqual([1])
+})
 
-test('Object cast into array', () => {
-    expect(castArray({'a': 1}))
-        .toBeDefined()
-        .toStrictEqual([{'a':1}]);
-});
+test('Cast array object', () => {
+    expect(castArray({ 'a': 1 })).toStrictEqual([{ 'a': 1 }])
+})
 
-test('String cast into array', () => {
-    expect(castArray('abc'))
-        .toBeDefined()
-        .toStrictEqual(['abc']);
-});
+test('Cast array string', () => {
+    expect(castArray('abc')).toStrictEqual(['abc'])
+})
 
-test('Null cast into array', () => {
-    expect(castArray(null))
-        .toBeDefined()
-        .toStrictEqual([null]);
-});
+test('Cast array null', () => {
+    expect(castArray(null)).toStrictEqual([null])
+})
 
-test('Undefined cast into array', () => {
-    expect(castArray(undefined))
-        .toBeDefined()
-        .toStrictEqual([undefined]);
-});
+test('Cast array undefined', () => {
+    expect(castArray(undefined)).toStrictEqual([undefined])
+})
 
-test('Empty cast into array', () => {
-    expect(castArray())
-        .toBeDefined()
-        .toStrictEqual([]);
-});
+test('Cast array empty', () => {
+    expect(castArray()).toStrictEqual([undefined])
+})
 
-test('Array cast into array', () => {
-    const array = [1, 2, 3];
-    expect(castArray(array))
-        .toBeDefined()
-        .toStrictEqual(array);
-});
+test('Check casted array to be type array', () => {
+    const array = [1, 2, 3]
+    expect(castArray(array) === array).toBe(true)
+})
+

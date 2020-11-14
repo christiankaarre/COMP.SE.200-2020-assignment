@@ -1,14 +1,13 @@
-import difference from "../src/difference";
-import { test } from "@jest/globals";
+import difference from '../src/difference'
 
-test('documented usage for difference', () => {
-   expect(difference([2, 1], [2, 3]))
-       .toBeDefined()
-       .toStrictEqual([1]);
-});
+test('Difference between two arrays', () => {
+    expect(difference([2, 1], [2, 3])).toStrictEqual([1])
+})
 
-test('string as parameter for difference', () => {
-   expect(difference('abc', 'bc'))
-       .toBeDefined()
-       .toStrictEqual([]);
-});
+test('Difference between array and empty', () => {
+    expect(difference([2, 1])).toStrictEqual([2, 1])
+})
+
+test('CDifference of null', () => {
+    expect(difference(null)).toStrictEqual([])
+})

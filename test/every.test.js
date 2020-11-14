@@ -1,26 +1,21 @@
-import every from "../src/every";
-import { test } from "@jest/globals";
+import every from '../src/every'
 
-test('documented usage of every', () => {
-    expect(every([true, 1, null, 'yes'], Boolean))
-        .toBeDefined()
-        .toBe(false);
-});
+test('Check every value to be Boolean', () => {
+    var array = [true, 1]
+    expect(every(array, Boolean)).toBe(true)
+})
 
-test('only true as parameter for every', () => {
-    expect(every([true], Boolean))
-        .toBeDefined()
-        .toBe(true);
-});
+test('Check every value to not be Boolean', () => {
+    var array = [true, 1, null, 'yes']
+    expect(every(array, Boolean)).toBe(false)
+})
 
-test('everything as string for every', () => {
-    expect(every([true, 1, null, 'yes'], String))
-        .toBeDefined()
-        .toBe(true);
-});
+test('Check every value to be Number', () => {
+    var array = [2, 1, 3, 4.1]
+    expect(every(array, Number)).toBe(true)
+})
 
-test('null as parameter for every', () => {
-    expect(every(null, String))
-        .toBeDefined()
-        .toBe(true);
-});
+test('Null array', () => {
+    var array = null
+    expect(every(array, Number)).not.toBe(false)
+})
