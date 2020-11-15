@@ -9,7 +9,7 @@ test('Allocated Buffer', () => {
 });
 
 test('Allocated Uint8Array Buffer', () => {
-    let x = new Buffer(new Uint8Array(2))
+    let x = Buffer.alloc(5, new Uint8Array(2))
     expect(isBuffer(x))
         .toBeDefined()
         .toBe(true);
