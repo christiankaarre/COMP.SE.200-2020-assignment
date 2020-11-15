@@ -11,3 +11,19 @@ test('add negative numbers', () => {
 test('add infinite', () => {
     expect(add(Infinity, 5)).toBe(Infinity);
 })
+
+test('add undefined', () => {
+    expect(add(undefined, 5)).toBe(5);
+})
+
+test('add null', () => {
+    expect(add(null, 5)).toBe(5);
+})
+
+test('add undefined', () => {
+    expect(add(undefined, undefined)).toBe(0);
+})
+
+test('add null', () => {
+    expect(add(null, null)).toBe(0);
+})
