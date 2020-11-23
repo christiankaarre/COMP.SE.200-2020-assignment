@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --collectCoverageFrom=src/*.js",
-    "test:coveralls": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --collectCoverageFrom=src/*.js && coveralls < coverage/lcov.info"
+    "test:coveralls": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --collectCoverageFrom=src/*.js && coveralls < coverage/lcov.info",
+    "test:linter": "npx eslint test/**"
   },
   "type": "module",
   "author": "",
@@ -14,7 +15,7 @@
   "dependencies": {
     "@jest/globals": "^26.6.2",
     "coveralls": "^3.1.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.14.0",
     "jest": "^26.6.1",
     "jest-chain": "^1.1.5"
   },
