@@ -21,7 +21,7 @@ test('Cast array undefined', () => {
 })
 
 test('Cast array empty', () => {
-    expect(castArray()).toStrictEqual([undefined])
+    expect(castArray()).toStrictEqual([])
 })
 
 test('Check casted array to be type array', () => {
