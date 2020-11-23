@@ -8,3 +8,8 @@ script:
 
 notifications:
   email: false
+
+addons:
+  artifacts:
+    enabled: true
+    working_dir: coverage
