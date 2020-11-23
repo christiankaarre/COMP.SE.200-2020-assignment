@@ -45,3 +45,9 @@ test('NaN to Integer and back to Number', () => {
         .toBeDefined()
         .toBe(0);
 });
+
+test('Floating Number to Integer and to Finite', () => {
+    expect(toFinite(toInteger(Number(5.2))))
+        .toBeDefined()
+        .toBe(5);
+});

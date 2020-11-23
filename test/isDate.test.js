@@ -16,7 +16,7 @@ test('number is not date', () => {
 });
 
 test('string is not date', () => {
-    let string = String("test string");
+    let string = String('Mon April 23 2012');
     expect(isDate(string))
         .toBeDefined()
         .toBe(false);
