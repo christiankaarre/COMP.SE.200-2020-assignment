@@ -11,5 +11,6 @@ notifications:
 
 addons:
   artifacts:
-    enabled: true
-    working_dir: coverage
+    paths:
+      - ./coverage/lcov-report
+    target_paths: $TRAVIS_BUILD_NUMBER
